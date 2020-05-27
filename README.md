@@ -1,2 +1,3 @@
-# data-struct
- using python
+# 数据结构
+用 python 实现常见的数据结构
+- 数组
