@@ -47,6 +47,9 @@ class Array:
         self._check_index(index)
         return self._data[index]
 
+    def get_last(self):
+        return self.get(self._size - 1)
+
     def set(self, index, e):
         self._check_index(index)
         self._data[index] = e
