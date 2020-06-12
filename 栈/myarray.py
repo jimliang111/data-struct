@@ -50,6 +50,9 @@ class Array:
     def get_last(self):
         return self.get(self._size - 1)
 
+    def get_first(self):
+        return self.get(0)
+
     def set(self, index, e):
         self._check_index(index)
         self._data[index] = e
