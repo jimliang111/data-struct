@@ -59,12 +59,17 @@ class LinkedList:
 
     def remove_value(self, value):
         prev = self._dummy_head
+        is_remove = False
         while prev.next:
             if prev.next.value == value:
                 prev.next = prev.next.next
                 self._size -= 1
+                is_remove = True
                 break
             prev = prev.next
+        if not is_remove:
+            raise ValueError(
+                'can not remove {} value from LinkedList, value does not exists'.format(value))
 
     def remove_first(self):
         return self.remove(0)
@@ -129,3 +134,9 @@ if __name__ == '__main__':
 
     linked_list.remove_value(5)
     print(linked_list)
+
+    linked_list.remove_value(999)
+    print(linked_list)
+    print(linked_list.get_size())
+
+    linked_list.remove_value(9999)

@@ -1,4 +1,4 @@
-from queue import Queue
+from userqueue import Queue
 from myarray import Array
 
 
